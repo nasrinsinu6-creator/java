@@ -14,6 +14,11 @@ sc.nextLine();
    	System.out.println("Execution terminated");
    	break;
    }
+if (choice != 1 && choice != 2) {
+System.out.println("Error: Invalid menu selection");
+continue;
+}
+
 System.out.println("Enter temperature :");
 String temp=sc.nextLine();
 try{
@@ -34,6 +39,9 @@ break;
 }
 }catch(NumberFormatException e){
 System.out.println("Error:Invalid input.you must enter a numerical value.");
+System.out.println("Exception details:"+e);
+System.out.println("Reason: " + e.getMessage());
+
 }
 }
 sc.close();
