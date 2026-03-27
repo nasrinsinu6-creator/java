@@ -24,12 +24,29 @@ public PrimeThread ( int n) { this . limit = n; }
 public void run (){
 System.out.println("->Prime Thread Started.");
 try{
-for (int i = 2; i <= limit; i++) {
-if (isPrime(i)) {
-System.out.println("Prime: " + i);
+int count = 0;
+int num = 2;
+
+while (count < limit) {
+boolean isPrime = true;
+
+for (int i = 2; i <= num / 2; i++) {
+if (num % i == 0) {
+isPrime = false;
+break;
+}
 }
 
+if (isPrime) {
+System.out.println(num);
+count++;
+Thread.sleep(250);
 }
+
+num++;
+}
+
+
 Thread.sleep(250);
 }catch(InterruptedException e){
 
