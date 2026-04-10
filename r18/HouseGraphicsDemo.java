@@ -46,15 +46,15 @@ Graphics2D g2d = (Graphics2D) g;
 g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 RenderingHints.VALUE_ANTIALIAS_ON);
 
-g2d.setColor(Color.LIGHT_GRAY);
+g2d.setColor(Color.RED);
 g2d.fillRect(100, 150, 200, 150);
 g2d.setColor(Color.BLACK);
 g2d.drawRect(100, 150, 200, 150);
 
-int[] xPoints = {80,200,320};
-int[] yPoints = {150,50,150};
 g2d.setColor(Color.DARK_GRAY);
-g2d.fillPolygon(xPoints,yPoints,3);
+g2d.fillRect(80, 90, 240, 60);
+g2d.setColor(Color.BLACK);
+g2d.drawRect(80, 90, 240, 60);
 
 g2d.setColor(doorColor);
 g2d.fillRect(DOOR_X,DOOR_Y,DOOR_W,DOOR_H);
